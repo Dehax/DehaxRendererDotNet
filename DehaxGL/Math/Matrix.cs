@@ -21,7 +21,7 @@
             }
         }
 
-        public Matrix(bool identity = false)
+        public Matrix(bool identity)
         {
             m = new double[4, 4];
 
@@ -139,7 +139,7 @@
 
         public static Matrix operator *(Matrix a, Matrix b)
         {
-            Matrix result = new Matrix();
+            Matrix result = new Matrix(false);
             double sum;
 
             for (int i = 0; i < 4; i++)

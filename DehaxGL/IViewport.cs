@@ -11,5 +11,8 @@ namespace DehaxGL
 
         void SetSize(int width, int height);
         void Clear();
+
+        void Lock();
+        void Unlock();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DehaxGL.Math;
 using System;
 using System.Drawing;
+using System.Numerics;
 
 namespace DehaxGL.Model
 {

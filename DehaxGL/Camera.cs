@@ -186,7 +186,7 @@ namespace DehaxGL
                 Vec3f xAxis = Vec3f.Normal(Vec3f.Cross(zAxis, _up));
                 Vec3f yAxis = Vec3f.Cross(xAxis, zAxis);
 
-                Matrix viewMatrix = new Matrix();
+                Matrix viewMatrix = new Matrix(false);
                 viewMatrix[0, 0] = xAxis.X;
                 viewMatrix[1, 0] = xAxis.Y;
                 viewMatrix[2, 0] = xAxis.Z;
@@ -209,7 +209,7 @@ namespace DehaxGL
         {
             get
             {
-                Matrix projection = new Matrix();
+                Matrix projection = new Matrix(false);
 
                 double h;
                 double v;

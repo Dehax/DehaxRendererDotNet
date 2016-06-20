@@ -35,6 +35,11 @@ namespace DehaxGL
 
         public void SetViewportSize(int width, int height)
         {
+            if (width == 0 || height == 0)
+            {
+                return;
+            }
+
             _camera.Width = width;
             _camera.Height = height;
             _viewport.SetSize(width, height);
@@ -364,6 +369,7 @@ namespace DehaxGL
 
         public void Render(RenderMode renderMode)
         {
+            _viewport.Lock();
             _viewport.Clear();
 
             int numObjects = _scene.NumObjects;
@@ -379,6 +385,8 @@ namespace DehaxGL
 
                 RenderModel(model, renderMode);
             }
+
+            _viewport.Unlock();
         }
     }
 }
